@@ -1,4 +1,0 @@
-salloc -Ag2019003 -p core -n 2 -t 5:00:00 --reservation=g2019003_1
-
-cd /proj/g2019003/nobackup/private/5_Tean_Teh_2017/     to row data directory
-ln -s 文件/路径名字  rename(自己命名)  （得到link指向文件，不用copy）
