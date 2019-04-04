@@ -42,7 +42,7 @@ Count aligned short-reads of RNA-seq against the predicted gene models. Test dif
 
 ## 3 What to do in this project (according to LabManual)
 
-#### Data on hand: 
+#### Data on hand: 'mark with 6'
 
 illumina_data: scaffold
 
