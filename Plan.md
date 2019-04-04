@@ -54,7 +54,7 @@ transcriptome : trimmed & untrimmed, both scaffold
   * Assembly with different parameters (do at last/ meanwhile)
   * Genome size and ploidy(while waiting for assembly result) - Jellyfish
 * Correct the assembly with Illumina reads - Pilon
-* Assembly quality assessment - QUAST and CANU¡¯s N50
+* Assembly quality assessment - QUAST and CANU's N50
   * Assembly evaluation with more than one method
 * Structural and functional annotation - RepeatModeler, Maker, Blast2GO, BLASTP, InterProScan
 * Reads preprocessing: trimming + quality check (before and after) - trim_galore
