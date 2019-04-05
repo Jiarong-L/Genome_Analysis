@@ -1,0 +1,33 @@
+
+install jellyfish
+
+zcat /domus/h1/jili0178/GA2019/Genome_Analysis/data/illumina_DNA/SRR6058604_scaffold_06.1P.fastq.gz  >1P.fq
+#zcat /domus/h1/jili0178/GA2019/Genome_Analysis/data/illumina_DNA/SRR6058604_scaffold_06.2P.fastq.gz  >2P.fq
+#zcat /domus/h1/jili0178/GA2019/Genome_Analysis/data/illumina_DNA/SRR6058604_scaffold_06.1U.fastq.gz  >1U.fq
+#zcat /domus/h1/jili0178/GA2019/Genome_Analysis/data/illumina_DNA/SRR6058604_scaffold_06.2U.fastq.gz  >2U.fq
+
+
+结果不对
+./jellyfish count -m 31 -t 10 -s 300M 1P.fq
+#./jellyfish dump mer_counts_0 > kmer_count.fasta
+./jellyfish stats mer_counts_0
+
+Unique:    40885328
+Distinct:  119270193
+Total:     535411475
+Max_count: 48905
+
+
+./jellyfish histo mer_counts_0 > kmer_hist.tsv
+
+
+x <- read.table('xxxx/kmer_hist.tsv', header = F, sep = " ", stringsAsFactors = F)
+#######x9<-kmer_hist[100:1000,]
+pdf("kmer_hist.pdf")
+plot(x, type = "l")
+dev.off()
+
+
+
+
+
