@@ -19,6 +19,6 @@ samtools index -@ 10 align.bam
 sambamba markdup -t 10 align.bam align_markdup.bam
 samtools view -@ 10 -q 30 align_markdup.bam > align_filter.bam
 samtools index -@ 10 align_filter.bam
-pilon --genome /domus/h1/jili0178/GA2019/analyses_results/01_assemblyDNA/durian_pacbio_0405_44m_22pm/durian_pacbio_assembly_0405_44m_22pm.contigs.fasta --frags align_filer.bam --fix snps,indels --output pilon_polished --vcf &> pilon.log
+pilon --genome /domus/h1/jili0178/GA2019/analyses_results/01_assemblyDNA/durian_pacbio_0405_44m_22pm/durian_pacbio_assembly_0405_44m_22pm.contigs.fasta --bam align_filer.bam --fix snps,indels --output pilon_polished --vcf &> pilon.log
 
 
