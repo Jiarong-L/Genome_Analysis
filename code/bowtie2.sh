@@ -11,5 +11,4 @@
 module load bioinfo-tools
 module load bowtie2
 
-bowtie2-build /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fasta \
-/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/bowtie2index
+bowtie2-build /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fasta /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
