@@ -11,7 +11,7 @@
 module load bioinfo-tools
 module load samtools 
 module load bowtie2
-module load tophat/2.0.12
+module load tophat
 
 
 tophat -o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156069  \
