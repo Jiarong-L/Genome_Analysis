@@ -12,3 +12,7 @@ samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatou
 cd /domus/h1/jili0178/GA2019/Genome_Analysis/code
 
 sbatch trinity.sh
+
+
+##see the room:
+du -sh /domus/h1/jili0178/
