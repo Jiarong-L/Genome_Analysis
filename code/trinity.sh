@@ -2,7 +2,7 @@
 #SBATCH -A g2019003
 #SBATCH -p core
 #SBATCH -n 4
-#SBATCH -t 15:00:00
+#SBATCH -t 20:00:00
 #SBATCH -J Tophat_Align_to_polished_DNA
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user jiarong.liang.0178@student.uu.se
