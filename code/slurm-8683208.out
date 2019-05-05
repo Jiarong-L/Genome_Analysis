@@ -1,0 +1,321 @@
+bowtie not loaded, will load bowtie 
+
+[2019-05-04 11:25:15] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 11:25:15] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 11:25:15] Checking for Bowtie index files (genome)..
+[2019-05-04 11:25:16] Checking for reference FASTA file
+[2019-05-04 11:25:16] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 11:25:16] Preparing reads
+	 left reads: min. length=50, max. length=126, 1559332 kept reads (201 discarded)
+	right reads: min. length=50, max. length=126, 1559526 kept reads (7 discarded)
+[2019-05-04 11:26:46] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 11:28:54] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/5)
+[2019-05-04 11:29:04] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/5)
+[2019-05-04 11:29:14] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/5)
+[2019-05-04 11:29:25] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/5)
+[2019-05-04 11:29:35] Mapping left_kept_reads_seg5 to genome pilon_out_0427 with Bowtie2 (5/5)
+[2019-05-04 11:29:48] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 11:31:41] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/5)
+[2019-05-04 11:31:49] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/5)
+[2019-05-04 11:31:59] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/5)
+[2019-05-04 11:32:10] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/5)
+[2019-05-04 11:32:19] Mapping right_kept_reads_seg5 to genome pilon_out_0427 with Bowtie2 (5/5)
+[2019-05-04 11:32:30] Searching for junctions via segment mapping
+[2019-05-04 11:33:06] Retrieving sequences for splices
+[2019-05-04 11:33:08] Indexing splices
+Building a SMALL index
+[2019-05-04 11:33:09] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/5)
+[2019-05-04 11:33:16] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/5)
+[2019-05-04 11:33:22] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/5)
+[2019-05-04 11:33:28] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/5)
+[2019-05-04 11:33:35] Mapping left_kept_reads_seg5 to genome segment_juncs with Bowtie2 (5/5)
+[2019-05-04 11:33:42] Joining segment hits
+[2019-05-04 11:34:21] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/5)
+[2019-05-04 11:34:29] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/5)
+[2019-05-04 11:34:35] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/5)
+[2019-05-04 11:34:41] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/5)
+[2019-05-04 11:34:46] Mapping right_kept_reads_seg5 to genome segment_juncs with Bowtie2 (5/5)
+[2019-05-04 11:34:52] Joining segment hits
+[2019-05-04 11:35:29] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 11:38:31] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156069/align_summary.txt
+[2019-05-04 11:38:31] Run complete: 00:13:15 elapsed
+
+[2019-05-04 11:38:31] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 11:38:31] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 11:38:31] Checking for Bowtie index files (genome)..
+[2019-05-04 11:38:31] Checking for reference FASTA file
+[2019-05-04 11:38:31] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 11:38:31] Preparing reads
+	 left reads: min. length=50, max. length=101, 1751638 kept reads (14 discarded)
+	right reads: min. length=50, max. length=101, 1751631 kept reads (21 discarded)
+[2019-05-04 11:39:38] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 11:41:21] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 11:41:30] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 11:41:39] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 11:41:50] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 11:42:02] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 11:43:41] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 11:43:50] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 11:44:01] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 11:44:11] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 11:44:23] Searching for junctions via segment mapping
+[2019-05-04 11:44:54] Retrieving sequences for splices
+[2019-05-04 11:44:56] Indexing splices
+Building a SMALL index
+[2019-05-04 11:44:57] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 11:45:05] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 11:45:12] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 11:45:19] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 11:45:27] Joining segment hits
+[2019-05-04 11:45:54] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 11:46:04] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 11:46:11] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 11:46:18] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 11:46:26] Joining segment hits
+[2019-05-04 11:46:50] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 11:49:29] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156067/align_summary.txt
+[2019-05-04 11:49:29] Run complete: 00:10:58 elapsed
+
+[2019-05-04 11:49:29] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 11:49:29] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 11:49:29] Checking for Bowtie index files (genome)..
+[2019-05-04 11:49:29] Checking for reference FASTA file
+[2019-05-04 11:49:29] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 11:49:29] Preparing reads
+	 left reads: min. length=50, max. length=126, 1546243 kept reads (58 discarded)
+	right reads: min. length=50, max. length=126, 1546025 kept reads (276 discarded)
+[2019-05-04 11:50:44] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 11:52:31] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/5)
+[2019-05-04 11:52:40] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/5)
+[2019-05-04 11:52:49] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/5)
+[2019-05-04 11:52:58] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/5)
+[2019-05-04 11:53:07] Mapping left_kept_reads_seg5 to genome pilon_out_0427 with Bowtie2 (5/5)
+[2019-05-04 11:53:18] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 11:55:21] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/5)
+[2019-05-04 11:55:30] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/5)
+[2019-05-04 11:55:41] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/5)
+[2019-05-04 11:55:51] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/5)
+[2019-05-04 11:56:01] Mapping right_kept_reads_seg5 to genome pilon_out_0427 with Bowtie2 (5/5)
+[2019-05-04 11:56:12] Searching for junctions via segment mapping
+[2019-05-04 11:56:47] Retrieving sequences for splices
+[2019-05-04 11:56:48] Indexing splices
+Building a SMALL index
+[2019-05-04 11:56:50] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/5)
+[2019-05-04 11:56:55] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/5)
+[2019-05-04 11:57:00] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/5)
+[2019-05-04 11:57:06] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/5)
+[2019-05-04 11:57:11] Mapping left_kept_reads_seg5 to genome segment_juncs with Bowtie2 (5/5)
+[2019-05-04 11:57:17] Joining segment hits
+[2019-05-04 11:57:47] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/5)
+[2019-05-04 11:57:53] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/5)
+[2019-05-04 11:57:58] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/5)
+[2019-05-04 11:58:04] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/5)
+[2019-05-04 11:58:09] Mapping right_kept_reads_seg5 to genome segment_juncs with Bowtie2 (5/5)
+[2019-05-04 11:58:15] Joining segment hits
+[2019-05-04 11:58:47] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 12:01:26] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156066/align_summary.txt
+[2019-05-04 12:01:26] Run complete: 00:11:57 elapsed
+
+[2019-05-04 12:01:26] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 12:01:26] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 12:01:26] Checking for Bowtie index files (genome)..
+[2019-05-04 12:01:26] Checking for reference FASTA file
+[2019-05-04 12:01:26] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 12:01:27] Preparing reads
+	 left reads: min. length=50, max. length=101, 1436405 kept reads (86 discarded)
+	right reads: min. length=50, max. length=101, 1436479 kept reads (12 discarded)
+[2019-05-04 12:02:31] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:04:02] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:04:10] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:04:19] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:04:27] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:04:38] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:06:05] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:06:13] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:06:21] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:06:29] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:06:40] Searching for junctions via segment mapping
+[2019-05-04 12:07:08] Retrieving sequences for splices
+[2019-05-04 12:07:10] Indexing splices
+Building a SMALL index
+[2019-05-04 12:07:11] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:07:16] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:07:22] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:07:27] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:07:33] Joining segment hits
+[2019-05-04 12:07:50] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:07:56] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:08:01] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:08:06] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:08:12] Joining segment hits
+[2019-05-04 12:08:30] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 12:10:43] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040097/align_summary.txt
+[2019-05-04 12:10:43] Run complete: 00:09:16 elapsed
+
+[2019-05-04 12:10:43] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 12:10:43] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 12:10:43] Checking for Bowtie index files (genome)..
+[2019-05-04 12:10:43] Checking for reference FASTA file
+[2019-05-04 12:10:43] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 12:10:43] Preparing reads
+	 left reads: min. length=50, max. length=101, 2209028 kept reads (84 discarded)
+	right reads: min. length=50, max. length=101, 2209021 kept reads (91 discarded)
+[2019-05-04 12:12:21] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:14:29] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:14:39] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:14:49] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:15:00] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:15:12] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:17:18] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:17:28] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:17:38] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:17:49] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:18:02] Searching for junctions via segment mapping
+[2019-05-04 12:18:36] Retrieving sequences for splices
+[2019-05-04 12:18:38] Indexing splices
+Building a SMALL index
+[2019-05-04 12:18:40] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:18:45] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:18:51] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:18:56] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:19:02] Joining segment hits
+[2019-05-04 12:19:19] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:19:26] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:19:31] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:19:36] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:19:42] Joining segment hits
+[2019-05-04 12:19:59] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 12:23:21] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040096/align_summary.txt
+[2019-05-04 12:23:21] Run complete: 00:12:38 elapsed
+
+[2019-05-04 12:23:22] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 12:23:22] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 12:23:22] Checking for Bowtie index files (genome)..
+[2019-05-04 12:23:22] Checking for reference FASTA file
+[2019-05-04 12:23:22] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 12:23:22] Preparing reads
+	 left reads: min. length=50, max. length=101, 2912099 kept reads (66 discarded)
+	right reads: min. length=50, max. length=101, 2912089 kept reads (76 discarded)
+[2019-05-04 12:25:19] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:27:39] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:27:46] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:27:53] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:28:01] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:28:10] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:30:31] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:30:38] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:30:45] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:30:53] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:31:02] Searching for junctions via segment mapping
+[2019-05-04 12:31:37] Retrieving sequences for splices
+[2019-05-04 12:31:39] Indexing splices
+Building a SMALL index
+[2019-05-04 12:31:41] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:31:45] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:31:50] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:31:55] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:31:59] Joining segment hits
+[2019-05-04 12:32:16] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:32:24] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:32:28] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:32:33] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:32:38] Joining segment hits
+[2019-05-04 12:32:55] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 12:37:46] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040094/align_summary.txt
+[2019-05-04 12:37:46] Run complete: 00:14:24 elapsed
+
+[2019-05-04 12:37:46] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 12:37:46] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 12:37:47] Checking for Bowtie index files (genome)..
+[2019-05-04 12:37:47] Checking for reference FASTA file
+[2019-05-04 12:37:47] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 12:37:47] Preparing reads
+	 left reads: min. length=50, max. length=101, 1353781 kept reads (57 discarded)
+	right reads: min. length=50, max. length=101, 1353796 kept reads (42 discarded)
+[2019-05-04 12:38:48] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:40:10] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:40:16] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:40:23] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:40:30] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:40:38] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:41:59] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:42:05] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:42:12] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:42:18] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:42:26] Searching for junctions via segment mapping
+[2019-05-04 12:42:52] Retrieving sequences for splices
+[2019-05-04 12:42:54] Indexing splices
+Building a SMALL index
+[2019-05-04 12:42:55] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:42:59] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:43:02] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:43:05] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:43:09] Joining segment hits
+[2019-05-04 12:43:21] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:43:26] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:43:29] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:43:32] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:43:36] Joining segment hits
+[2019-05-04 12:43:48] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 12:45:58] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040093/align_summary.txt
+[2019-05-04 12:45:58] Run complete: 00:08:11 elapsed
+
+[2019-05-04 12:45:58] Beginning TopHat run (v2.1.1)
+-----------------------------------------------
+[2019-05-04 12:45:58] Checking for Bowtie
+		  Bowtie version:	 2.3.4.3
+[2019-05-04 12:45:58] Checking for Bowtie index files (genome)..
+[2019-05-04 12:45:58] Checking for reference FASTA file
+[2019-05-04 12:45:58] Generating SAM header for /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427
+[2019-05-04 12:45:59] Preparing reads
+	 left reads: min. length=50, max. length=101, 1679831 kept reads (67 discarded)
+	right reads: min. length=50, max. length=101, 1679818 kept reads (80 discarded)
+[2019-05-04 12:47:14] Mapping left_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:48:54] Mapping left_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:49:00] Mapping left_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:49:08] Mapping left_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:49:16] Mapping left_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:49:25] Mapping right_kept_reads to genome pilon_out_0427 with Bowtie2 
+[2019-05-04 12:51:02] Mapping right_kept_reads_seg1 to genome pilon_out_0427 with Bowtie2 (1/4)
+[2019-05-04 12:51:08] Mapping right_kept_reads_seg2 to genome pilon_out_0427 with Bowtie2 (2/4)
+[2019-05-04 12:51:16] Mapping right_kept_reads_seg3 to genome pilon_out_0427 with Bowtie2 (3/4)
+[2019-05-04 12:51:23] Mapping right_kept_reads_seg4 to genome pilon_out_0427 with Bowtie2 (4/4)
+[2019-05-04 12:51:32] Searching for junctions via segment mapping
+[2019-05-04 12:52:00] Retrieving sequences for splices
+[2019-05-04 12:52:01] Indexing splices
+Building a SMALL index
+[2019-05-04 12:52:03] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:52:07] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:52:10] Mapping left_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:52:13] Mapping left_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:52:17] Joining segment hits
+[2019-05-04 12:52:30] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2019-05-04 12:52:35] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2019-05-04 12:52:39] Mapping right_kept_reads_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2019-05-04 12:52:42] Mapping right_kept_reads_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2019-05-04 12:52:46] Joining segment hits
+[2019-05-04 12:52:59] Reporting output tracks
+-----------------------------------------------
+[2019-05-04 12:55:30] A summary of the alignment counts can be found in /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040092/align_summary.txt
+[2019-05-04 12:55:30] Run complete: 00:09:31 elapsed

@@ -31,10 +31,10 @@ samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatou
 -o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040094_sorted.bam
 
 samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040093/accepted_hits.bam  \
--o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6156069_sorted.bam
+-o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040093_sorted.bam
 
-samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040093/accepted_hits.bam  \
--o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6156069_sorted.bam
+samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040092/accepted_hits.bam  \
+-o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040092_sorted.bam
 
 
 
