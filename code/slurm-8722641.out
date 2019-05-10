@@ -1,0 +1,20 @@
+Trinity version: Trinity-v2.4.0
+Friday, May 10, 2019: 09:09:22	CMD: /sw/bioinfo/trinity/2.4.0/rackham/util/support_scripts/ensure_coord_sorted_sam.pl /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam
+** NOTE: Latest version of Trinity is Trinity-v2.8.4, and can be obtained at:
+	https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+-appears to be a coordinate sorted bam file. ok.
+Friday, May 10, 2019: 09:09:22	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /sw/bioinfo/trinity/2.4.0/rackham/util/support_scripts/ExitTester.jar 0
+Friday, May 10, 2019: 09:09:23	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /sw/bioinfo/trinity/2.4.0/rackham/util/support_scripts/ExitTester.jar 1
+Friday, May 10, 2019: 09:09:23	CMD: mkdir -p /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged
+
+
+----------------------------------------------------------------------------------
+-------------- Trinity Phase 1: Clustering of RNA-Seq Reads  ---------------------
+----------------------------------------------------------------------------------
+
+Friday, May 10, 2019: 09:09:23	CMD: samtools index /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam
+Friday, May 10, 2019: 09:09:35	CMD: /sw/bioinfo/trinity/2.4.0/rackham/util/support_scripts/prep_rnaseq_alignments_for_genome_assisted_assembly.pl --coord_sorted_SAM /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam -I 10000 --sort_buffer 10G --CPU 4 
+CMD: /sw/bioinfo/trinity/2.4.0/rackham/util/support_scripts//SAM_to_frag_coords.pl --CPU 4 --sort_buffer 10G --sam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam --min_insert_size 1 --max_insert_size 10000 
+-extracting read coordinates from /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam into /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam.read_coords
+

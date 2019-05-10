@@ -12,23 +12,12 @@ module load bioinfo-tools
 module load samtools 
 
 
-samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156069/accepted_hits.bam  \
--o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6156069_sorted.bam
-
-samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156067/accepted_hits.bam  \
--o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6156067_sorted.bam
-
-samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6156066/accepted_hits.bam  \
--o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6156066_sorted.bam
 
 samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040097/accepted_hits.bam  \
 -o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040097_sorted.bam
 
 samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040096/accepted_hits.bam  \
 -o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040096_sorted.bam
-
-samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040094/accepted_hits.bam  \
--o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040094_sorted.bam
 
 samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/SRR6040093/accepted_hits.bam  \
 -o /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040093_sorted.bam
