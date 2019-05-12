@@ -1,0 +1,26 @@
+module load bioinfo-tools
+module load maker/3.01.1-beta
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation
+
+maker -CTL
+
+#1st round---change maker_opts.ctl:
+
+genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+est=/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta
+est2genome=1
+
+run maker(i use sbatch)
+
+
+
+
+## maybe try this next time?
+
+trna=1
+correct_est_fusion=1 #limits use of ESTs in annotation to avoid fusion genes
+
+
+
+
