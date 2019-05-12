@@ -4,7 +4,7 @@ Genome Analysis Project. https://docs.google.com/document/d/17W9Smb3jsrqAn71ogQF
 
 
 
-
+#### cd /domus/h1/jili0178/GA2019/Genome_Analysis/code
 #### git pull origin master 
 #### git add --all
 #### git commit -m ''
