@@ -1,4 +1,6 @@
 
+downloaded https://www.ncbi.nlm.nih.gov/nuccore/NSDW01000006.1?report=fasta
+
 module load bioinfo-tools
 module load quast
 
@@ -15,3 +17,14 @@ quast.py \
 -o /domus/h1/jili0178/GA2019/analyses_results/03_quality_assessDNA/Pilon_Quast_reference_CANU \
 -R /domus/h1/jili0178/GA2019/analyses_results/01_assemblyDNA/durian_pacbio_0411_27m/durian_pacbio_assembly_0411_27m.contigs.fasta \
 /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+
+
+quast.py \
+-o /domus/h1/jili0178/GA2019/analyses_results/03_quality_assessDNA/Pilon_Quast_reference_paper \
+-R /domus/h1/jili0178/GA2019/analyses_results/03_quality_assessDNA/sequence.fasta \
+/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+
+quast.py \
+-o /domus/h1/jili0178/GA2019/analyses_results/03_quality_assessDNA/CANU_Quast_reference_paper \
+-R /domus/h1/jili0178/GA2019/analyses_results/03_quality_assessDNA/sequence.fasta \
+/domus/h1/jili0178/GA2019/analyses_results/01_assemblyDNA/durian_pacbio_0411_27m/durian_pacbio_assembly_0411_27m.contigs.fasta

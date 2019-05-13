@@ -1,0 +1,33 @@
+
+http://deweylab.biostat.wisc.edu/detonate/rsem-eval.html Fail to run
+
+cd /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA
+
+wget http://deweylab.biostat.wisc.edu/detonate/detonate-1.11.tar.gz
+
+tar -xzvf detonate-1.11.tar.gz
+
+ls detonate-1.11
+
+cd /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA/detonate-1.11
+
+module load bioinfo-tools
+module load bowtie2
+module load bowtie
+module load samtools
+
+make
+
+/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA/detonate-1.11/rsem-eval/rsem-eval-calculate-score --help
+
+
+/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA/detonate-1.11/rsem-eval/rsem-eval-estimate-transcript-length-distribution \
+/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta detonate_transcript_length_distribution
+#get mean of 1673
+
+/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA/detonate-1.11/rsem-eval/rsem-eval-calculate-score \
+--transcript-length-parameters /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA/detonate_transcript_length_distribution \
+--paired-end /domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040097_scaffold_06.1.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040096_scaffold_06.1.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040093_scaffold_06.1.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040092_scaffold_06.1.fastq.gz \
+/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040097_scaffold_06.2.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040096_scaffold_06.2.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040093_scaffold_06.2.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040092_scaffold_06.2.fastq.gz \
+/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta \
+detonate_out 1673

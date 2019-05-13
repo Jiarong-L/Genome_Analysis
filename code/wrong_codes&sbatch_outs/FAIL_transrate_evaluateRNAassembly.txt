@@ -1,26 +1,3 @@
-
-http://deweylab.biostat.wisc.edu/detonate/rsem-eval.html Fail to run
-
-cd /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA
-
-http://deweylab.biostat.wisc.edu/detonate/detonate-1.11.tar.gz
-
-tar -xzvf detonate-1.11.tar.gz
-
-ls detonate-1.11
-
-cd /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/quality_RNA/detonate-1.11
-
-module load bowtie2
-module load bowtie
-
-make
-
-###failed
-
-
-
-
 http://hibberdlab.com/transrate/ can't add reads
 
 
@@ -50,3 +27,25 @@ Left files contained read id
 'SRR6040097.71.1'
 and right files contained read id
 'SRR6040097.71.2'.
+
+grep -n HWI-ST1293:179:H9W2AADXX:1:1101:10000:20124 left.fq
+
+
+
+
+
+
+
+
+so try seperately:
+./transrate-1.0.3-linux-x86_64/transrate \
+--assembly=/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta \
+--output=access_with_left_reads \
+--left=/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040097_scaffold_06.1.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040096_scaffold_06.1.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040093_scaffold_06.1.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040092_scaffold_06.1.fastq.gz
+
+
+./transrate-1.0.3-linux-x86_64/transrate \
+--assembly=/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta \
+--output=access_with_right_reads \
+--right=/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040097_scaffold_06.2.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040096_scaffold_06.2.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040093_scaffold_06.2.fastq.gz,/domus/h1/jili0178/GA2019/Genome_Analysis/data/trimmed_RNA/SRR6040092_scaffold_06.2.fastq.gz 
+

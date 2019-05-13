@@ -5,7 +5,8 @@ cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation
 
 maker -CTL
 
-#1st round---change maker_opts.ctl:
+#1st round---result to train snap
+change maker_opts.ctl:
 
 genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
 est=/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta
@@ -30,7 +31,7 @@ variable has been set to the Zoe directory.
 
 
 
-#2nd round--- training snap 1st/3 or 2
+#2nd round--- use trainned snap , result to train AUGUSTUS
 
 cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/pilon_out_0427.maker.output
 
@@ -54,3 +55,8 @@ snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.ou
 est2genome=0
 
 run maker(i use sbatch)
+
+
+#3nd round--- use trainned AUGUSTUS , result to train GeneMark
+
+#4nd round--- use trainned AUGUSTUS , the final round of maker
