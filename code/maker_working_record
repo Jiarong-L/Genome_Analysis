@@ -14,13 +14,43 @@ est2genome=1
 run maker(i use sbatch)
 
 
-
-
 ## maybe try this next time?
 
 trna=1
 correct_est_fusion=1 #limits use of ESTs in annotation to avoid fusion genes
 
+ls /sw/apps/bioinfo/snap/2013-11-29/rackham/HMM
+
+README for HMM directory
+========================
+
+These files can be loaded without explicit path if the $ZOE environment
+variable has been set to the Zoe directory.
 
 
 
+
+#2nd round--- training snap 1st/3 or 2
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/pilon_out_0427.maker.output
+
+gff3_merge -d pilon_out_0427_master_datastore_index.log
+maker2zff pilon_out_0427.all.gff
+fathom genome.ann genome.dna -validate > snap_validate_output.txt
+cat snap_validate_output.txt | grep "error" 
+#MODEL315 7492 8096 3 + errors(1): cds:internal_stop warnings(2): split-start exon-1:short(1)
+grep -vwE "MODEL315" genome.ann > genome.ann2
+fathom genome.ann2 genome.dna -validate 
+fathom genome.ann2 genome.dna -categorize 1000
+fathom uni.ann uni.dna -export 1000 -plus 
+forge export.ann export.dna
+hmm-assembler.pl my_genome . > my_genome.hmm
+
+!!!!!! rename folder pilon_out_0427.maker.output as round1_maker.output
+
+change maker_opts.ctl:
+
+snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/my_genome.hmm
+est2genome=0
+
+run maker(i use sbatch)
