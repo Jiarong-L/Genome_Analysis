@@ -50,7 +50,7 @@ perl new.pl --species=my_species
 etraining --species=my_species augustus.gbk.train
 augustus --species=my_species augustus.gbk.test | tee first_training.out
 
-optimize_augustus.pl --species=my_species augustus.gbk.train    -------long time,maybe run sbatch from now on
+optimize_augustus.pl --species=my_species augustus.gbk.train    -------long time,maybe run sbatch from now on. TIMEOUT doesn't matter
 
 etraining --species=my_species augustus.gbk.train
 augustus --species=my_species augustus.gbk.test | tee second_training.out ---------------------------##augustus
@@ -66,19 +66,12 @@ gmes_petap.pl -ES -fungus -cores 2 -sequence /domus/h1/jili0178/GA2019/analyses_
 
 
 change maker_opts.ctl:
+
 snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/my_genome.hmm
 augustus_species=my_species
 gmhmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/output/gmhmm.mod
-est2genome=0
+
+
 
 run maker(i use sbatch)
 
-
-
-
-
-
-
-change maker_opts.ctl:
-snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round2_maker.output/my_genome.hmm
-augustus_species=my_species

@@ -1,0 +1,421 @@
+GeneMark/4.33-es : A recent key file is needed to use this software and it must
+exist in your home directory. If you know you 
+GeneMark/4.33-es : already have this key file, ignore this message. If you need
+the key file, use this command: 
+GeneMark/4.33-es : cp -v /sw/apps/bioinfo/GeneMark/4.33-es/rackham/gm_key
+$HOME/.gm_key 
+Before running with mpirun: export LD_PRELOAD=$MPI_ROOT/lib/libmpi.so 
+Add the following option when using mpirun: -mca btl ^openib 
+Splitting training file into 8 buckets...
+Reading in the meta parameters used for optimization from /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/generic/generic_metapars.cfg...
+Reading in the starting meta parameters from /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+starting accuracy: 0.9539, 0.6242, 0.7472, 0.5229, 0.2302, 0.1424, -1.00, -1.00, starting target: 0.6306
+improving parameter /Constant/dss_end curently set to 4
+1-4
+/Constant/dss_end: checking values 1	2	3	4
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 Sampling error in intron model. state=37 base=8625
+
+augustus: ERROR
+	Tried to sample from empty list.
+
+7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.6029	0.6059	0.6239	0.6306
+improving parameter /Constant/dss_start curently set to 2
+1-3
+/Constant/dss_start: checking values 1	2	3
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+retrieve accuracy from previous computation
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+found improvement: 0.9517, 0.6281, 0.7411, 0.5296, 0.2361, 0.1461, -1.00, -1.00, optimal target: 0.6319
+changing /Constant/dss_start to 3
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	3
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	100
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+values  1	2	3
+targets 0.6212	0.6306	0.6319
+/Constant/dss_start: checking values 3
+retrieve accuracy from previous computation
+values  3
+targets 0.6319
+improving parameter /Constant/ass_start curently set to 3
+1-3
+/Constant/ass_start: checking values 1	2	3
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+found improvement: 0.9529, 0.6270, 0.7440, 0.5290, 0.2399, 0.1500, -1.00, -1.00, optimal target: 0.6331
+changing /Constant/ass_start to 2
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	100
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.6293	0.6331	0.6319
+/Constant/ass_start: checking values 2
+retrieve accuracy from previous computation
+values  2
+targets 0.6331
+improving parameter /Constant/ass_end curently set to 2
+0-4
+/Constant/ass_end: checking values 0	1	2	3	4
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+retrieve accuracy from previous computation
+bucket 1 2 3 4 5 6 7 8 
+bucket 1 2 3 4 5 6 7 8 
+values  0	1	2	3	4
+targets 0.6224	0.6297	0.6331	0.6271	0.6167
+improving parameter /Constant/ass_upwindow_size curently set to 30
+1-50
+/Constant/ass_upwindow_size: checking values 1	13	25	37	50
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+values  1	13	25	37	50
+targets 0.6037	0.6246	0.6324	0.6304	0.6282
+improving parameter /IntronModel/d curently set to 100
+100-950
+/IntronModel/d: checking values 100	312	525	737	950
+retrieve accuracy from previous computation
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+found improvement: 0.9569, 0.6284, 0.7549, 0.5350, 0.2480, 0.1556, -1.00, -1.00, optimal target: 0.6387
+changing /IntronModel/d to 312
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	312
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+found improvement: 0.9565, 0.6290, 0.7551, 0.5368, 0.2480, 0.1562, -1.00, -1.00, optimal target: 0.6392
+changing /IntronModel/d to 525
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+found improvement: 0.9564, 0.6294, 0.7545, 0.5361, 0.2504, 0.1585, -1.00, -1.00, optimal target: 0.6394
+changing /IntronModel/d to 737
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	737
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+found improvement: 0.9570, 0.6290, 0.7555, 0.5363, 0.2510, 0.1590, -1.00, -1.00, optimal target: 0.6398
+changing /IntronModel/d to 950
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	950
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config/species/my_species/my_species_parameters.cfg...
+values  100	312	525	737	950
+targets 0.6331	0.6387	0.6392	0.6394	0.6398
+/IntronModel/d: checking values 738	791	844	897	950
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+3 ExonModel::processInternalExon: in-frame stop codon
+4 ExonModel::processInternalExon: in-frame stop codon
+5 ExonModel::processInternalExon: in-frame stop codon
+6 7 ExonModel::processInternalExon: in-frame stop codon
+8 
+bucket ExonModel::processInternalExon: in-frame stop codon
+1 ExonModel::processInternalExon: in-frame stop codon
+2 ExonModel::processInternalExon: in-frame stop codon
+slurmstepd: error: *** JOB 8778193 ON r334 CANCELLED AT 2019-05-14T22:38:53 DUE TO TIME LIMIT ***
