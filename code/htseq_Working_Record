@@ -1,0 +1,17 @@
+module load maker/3.01.1-beta
+module load blat/35
+module load htseq/0.9.1
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round2_maker.output
+gff3_merge -d pilon_out_0427_master_datastore_index.log
+maker2zff pilon_out_0427.all.gff
+fathom genome.ann genome.dna -validate > snap_validate_output.txt
+#no error
+zff2gff3.pl genome.ann | perl -plne 's/\t(\S+)$/\t\.\t$1/' >genome.gff3
+
+----------------------------------------------------------------------------------------------------------------------
+
+cd /domus/h1/jili0178/GA2019/analyses_results/07_differential_analyses
+
+htseq-count -f bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/merged_sorted.bam /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round2_maker.output/genome.gff3
+

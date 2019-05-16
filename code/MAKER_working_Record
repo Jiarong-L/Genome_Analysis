@@ -5,7 +5,7 @@ module load blat/35
 cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation
 maker -CTL
 
------------------------------------------------------------------------------------------------1st round---result to do training
+-------------------------------------------1st round---result to do training----------------------------------------------------
 change maker_opts.ctl:
 
 genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
@@ -14,9 +14,9 @@ est2genome=1
 
 run maker(i use sbatch)
 
---------------------------END------------------------------------
+--------------------------END------------------------------------------------------------------------------------------------------
 
------------------------------------------------------------------------------------------------#2nd round--- use trainned snap to run maker
+--------------------------------WEIRD OUTPUT!!!!!!!-------------------------------------------------------#2nd round--- use trainned snap to run maker
 
 cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output
 
@@ -62,9 +62,6 @@ gmes_petap.pl -ES -fungus -cores 2 -sequence /domus/h1/jili0178/GA2019/analyses_
  
 ---------also takes long time, next time better run in sbatch
 -----------------------------------------------------------------------------------------------------##genemark 
-
-
-
 change maker_opts.ctl:
 
 snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/my_genome.hmm
@@ -74,4 +71,81 @@ gmhmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.outp
 
 
 run maker(i use sbatch)
+
+------------------------------WEIRD OUTPUT£¡£¡£¡£¡----------------------3rd round re-do on 1st output with only snaphmm-----------------------------------------------------------------------------------------------------------
+module load bioinfo-tools
+module load maker/3.01.1-beta
+module load blat/35
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round3
+ maker -CTL
+
+
+genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/my_genome.hmm
+
+
+------------------------------------------------RERUN ON 1st's OUTPUT WITH ONLY AUGUTSTS-----------------------------------------------------------------------------------------------------------------------------------------
+
+snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation
+
+
+genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+augustus_species=my_species
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+
+
+
+>>>>>>>>>>>>>>>>>-----------FAILED to do so----------------------------------------4th round do only augustus on 3rd's output-------------------------------------------------------------------------------------------------------------
+module load bioinfo-tools
+module load maker/3.01.1-beta
+module load blat/35
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round3/pilon_out_0427.maker.output
+
+gff3_merge -d pilon_out_0427_master_datastore_index.log
+
+>>!!!!!!!!!!!>>>>>>>>delete fasta sequence in pilon_out_0427.all.gff
+
+#maker2zff pilon_out_0427.all.gff
+#fathom genome.ann genome.dna -validate
+#zff2gff3.pl genome.ann | perl -plne 's/\t(\S+)$/\t\.\t$1/' >genome.gff3
+
+gff2gbSmallDNA.pl \
+/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round3/pilon_out_0427.maker.output/pilon_out_0427.all.gff \
+/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa \
+4000 augustus.gbk
+
+randomSplit.pl augustus.gbk 100
+
+##----------change and create new.pl and copy 'configs' folder from AUGUSTUS..since need sudo but can't access------------
+
+export AUGUSTUS_CONFIG_PATH=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round3/pilon_out_0427.maker.output/config
+
+perl new.pl --species=durian_species
+
+etraining --species=durian_species augustus.gbk.train
+augustus --species=durian_species augustus.gbk.test
+
+----------------------------------------------------------------------------
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round4
+ >>maker -CTL
+
+genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+augustus_species=durian_species
+keep_preds=1
+
+---------------------------------------------------5th round do only gmhmm on 4th's output-------------------------------------------------------------------------------------------------------------
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round4
+
+
+genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+gmhmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/output/gmhmm.mod
+
+
 
