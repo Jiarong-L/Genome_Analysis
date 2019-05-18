@@ -18,7 +18,7 @@ est2genome=1
 
 run maker(i use sbatch)
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!20190518!!!!!!!!!!!!!!!!!!!!!-------------------------------------------2nd round--------use snaphmm------------new2----------------------------------------------
+-------------------------------------------2nd round--------use snaphmm------------new2----------------------------------------------
 module load bioinfo-tools maker
 
 cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/new1/pilon_out_0427.maker.output
@@ -48,7 +48,7 @@ snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.ou
 
 run maker(i use sbatch)
 
--------------------------------------------3rd round--------use augustus-------------new_maker3---------------------------------------------
+！！！！！！！！！！！！-------------------------------------------3rd round--------use augustus-------------new_maker3---------------------------------------------
 
 module load bioinfo-tools
 module load maker
@@ -66,7 +66,7 @@ fathom genome.ann genome.dna -validate > snap_validate_output.txt
 <<<<<<<<<<<<<<<fathom genome.ann2 genome.dna -categorize 1000
 <<<<<<<<<<<<<<<<<fathom uni.ann uni.dna -export 1000 -plus 
 <<<<<<<<<<<<<<<<<forge export.ann export.dna
-<<<<<<<<<<<<<<<<<hmm-assembler.pl /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa . > pilon_out_0427.hmm
+<<<<<<<<<<<<<<<<<hmm-assembler.pl pilon_out_0427 . > pilon_out_0427.hmm
 
 
 zff2gff3.pl genome.ann | perl -plne 's/\t(\S+)$/\t\.\t$1/' >genome.gff3
@@ -98,16 +98,7 @@ genome=/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411
 augustus_species=my_durian
 
 
-
-#####################################################################
-
-round1_maker.output doesn't seems to work
-
-maker version matters
-
-#####################################################################
-
---------------------------ANOTHER WAY-----------maker_AUGU-----------------------------------------------------------------------------------------------
+--------------------------ANOTHER WAY-----------maker_AUGU using gff2gbSmallDNA-----------------------------------------------------------------------------------------------
 
 module load bioinfo-tools
 module load maker
@@ -133,38 +124,3 @@ export AUGUSTUS_CONFIG_PATH=/domus/h1/jili0178/GA2019/analyses_results/04_annota
 perl new.pl --species=my_species
 etraining --species=my_species augustus.gbk.train
 augustus --species=my_species augustus.gbk.test | tee first_training.out
-
-
-cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/maker_2nd_snapAUGU
-
-maker -CTL
-
-change maker_opts.ctl:
-
-genome=/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
-snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/pilon_out_0427.hmm
-augustus_species=my_species
-
-
-----------------------ANOTHER WAY 2---------------------maker_2nd_snapAUGU2---------------------------------------------------------------------------------
-##
-perl zff2aug.pl > augustus2.gbk
-grep "LOCUS" augustus2.gbk| wc -l
-#1061
-randomSplit.pl augustus2.gbk 200
-
-export AUGUSTUS_CONFIG_PATH=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/config
-
-perl new.pl --species=my_species2
-etraining --species=my_species2 augustus2.gbk.train
-augustus --species=my_species2 augustus2.gbk.test | tee first_training2.out
-
-cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/maker_2nd_snapAUGU2
-
-maker -CTL
-
-genome=/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
-snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/pilon_out_0427.hmm
-augustus_species=my_species2
-
-##
