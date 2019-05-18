@@ -1,0 +1,22 @@
+## Trimming 
+
+
+java -jar /sw/apps/bioinfo/trimmomatic/0.36/rackham/trimmomatic-0.36.jar PE  \
+/domus/h1/jili0178/GA2019/Genome_Analysis/data/untrimmed_RNA/SRR6040095_scaffold_06.1.fastq.gz  \
+/domus/h1/jili0178/GA2019/Genome_Analysis/data/untrimmed_RNA/SRR6040095_scaffold_06.2.fastq.gz  \
+/domus/h1/jili0178/GA2019/analyses_results/05_trimmingRNA/R1_paired.fq.gz  \
+/domus/h1/jili0178/GA2019/analyses_results/05_trimmingRNA/R1_unpaired.fq.gz  \
+/domus/h1/jili0178/GA2019/analyses_results/05_trimmingRNA/R2_paired.fq.gz  \
+/domus/h1/jili0178/GA2019/analyses_results/05_trimmingRNA/R2_unpaired.fq.gz  \
+LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
+
+
+
+
+MINLEN：Bowtie：less than 50bp; Bowtie2: more than 50bp!!!!We use Bowtie2
+SLIDINGWINDOW：<windowSize>:<requiredQuality>
+
+
+#Quality encoding detected as phred33
+Input Read Pairs: 2768706 Both Surviving: 2634801 (95.16%) Forward Only Surviving: 36149 (1.31%) Reverse Only Surviving: 83525 (3.02%) Dropped: 14231 (0.51%)
+TrimmomaticPE: Completed successfully

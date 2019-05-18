@@ -1,0 +1,53 @@
+
+module load bioinfo-tools
+module load maker/3.01.1-beta
+module load blat/35
+
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/round2_maker.output
+gff3_merge -d pilon_out_0427_master_datastore_index.log
+
+then delete the fasta sequence of pilon_out_0427.all.gff
+
+----------------------------------------------------------------------------------------------------------------------
+module load bioinfo-tools
+module load samtools/1.9
+module load htseq/0.9.1
+
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040097_sorted.bam
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040096_sorted.bam
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040093_sorted.bam
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040092_sorted.bam
+
+---------------------------------------------------------------------------------------------------------------------------
+
+cd /domus/h1/jili0178/GA2019/analyses_results/07_differential_analyses/round1
+
+
+htseq-count -f bam -t CDS -i ID -r pos /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040097_sorted.bam \
+/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/pilon_out_0427.all.gff > rna_SRR6040097_counts.txt
+
+htseq-count -f bam -t CDS -i ID -r pos /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040096_sorted.bam \
+/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/pilon_out_0427.all.gff > rna_SRR6040096_counts.txt
+
+htseq-count -f bam -t CDS -i ID -r pos /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040093_sorted.bam \
+/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/pilon_out_0427.all.gff > rna_SRR6040093_counts.txt
+
+htseq-count -f bam -t CDS -i ID -r pos /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040092_sorted.bam \
+/domus/h1/jili0178/GA2019/analyses_results/04_annotation/round1_maker.output/pilon_out_0427.all.gff > rna_SRR6040092_counts.txt
+
+samtools view /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040097_sorted.bam | head
+
+
+
+
+htseq-count [options]?alignment_file?gff_file
+-f | --format default: sam 设置输入文件的格式，该参数的值可以是sam或bam。
+-r | --order default: name 设置sam或bam文件的排序方式，该参数的值可以是name或pos。前者表示按read名进行排序，后者表示按比对的参考基因组位置进行排序。若测序数据是双末端测序，当输入sam/bam文件是按pos方式排序的时候，两端reads的比对结果在sam/bam文件中一般不是紧邻的两行，程序会将reads对的第一个比对结果放入内存，直到读取到另一端read的比对结果。因此，选择pos可能会导致程序使用较多的内存，它也适合于未排序的sam/bam文件。而pos排序则表示程序认为双末端测序的reads比对结果在紧邻的两行上，也适合于单端测序的比对结果。很多其它表达量分析软件要求输入的sam/bam文件是按pos排序的，但HTSeq推荐使用name排序，且一般比对软件的默认输出结果也是按name进行排序的。
+-s | --stranded default: yes 设置是否是链特异性测序。该参数的值可以是yes,no或reverse。no表示非链特异性测序；若是单端测序，yes表示read比对到了基因的正义链上；若是双末端测序，yes表示read1比对到了基因正义链上，read2比对到基因负义链上；reverse表示双末端测序情况下与yes值相反的结果。根据说明文件的理解，一般情况下双末端链特异性测序，该参数的值应该选择reverse（本人暂时没有测试该参数）。
+-a | --a default: 10 忽略比对质量低于此值的比对结果。在0.5.4版本以前该参数默认值是0。
+-t | --type default: exon 程序会对该指定的feature（gtf/gff文件第三列）进行表达量计算，而gtf/gff文件中其它的feature都会被忽略。
+-i | --idattr default: gene_id 设置feature ID是由gtf/gff文件第9列那个标签决定的；若gtf/gff文件多行具有相同的feature ID，则它们来自同一个feature，程序会计算这些features的表达量之和赋给相应的feature ID。
+-m | --mode default: union 设置表达量计算模式。该参数的值可以有union, intersection-strict and intersection-nonempty。这三种模式的选择请见上面对这3种模式的示意图。从图中可知，对于原核生物，推荐使用intersection-strict模式；对于真核生物，推荐使用union模式。
+-o | --samout 输出一个sam文件，该sam文件的比对结果中多了一个XF标签，表示该read比对到了某个feature上。
+-q | --quiet 不输出程序运行的状态信息和警告信息。
+-h | --help 输出帮助信息。
