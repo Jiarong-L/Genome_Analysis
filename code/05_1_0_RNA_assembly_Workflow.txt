@@ -1,0 +1,18 @@
+
+1. Run bowtie2.sh
+2. changed the name of pilon_out_0427.fasta to pilon_out_0427.fa (in Pilon's output folder)
+3. Run tophat.sh
+4. Run sort_tophat.sh
+5. Merge the files in step 4:
+----------------------------------------------------------------------------------------------------------------
+
+cd /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat
+
+samtools merge /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/merged.bam *.bam
+samtools sort /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/tophatout/merged.bam -o merged_sorted.bam
+
+##see the room: du -sh /domus/h1/jili0178/
+
+----------------------------------------------------------------------------------------------------------------
+6. Run trinity_improve.sh
+ 

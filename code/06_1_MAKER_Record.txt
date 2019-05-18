@@ -1,0 +1,109 @@
+
+
+In sbatch, should first |cd <DIR>| and |export AUGUSTUS_CONFIG_PATH='xxxxxxx'|
+
+
+
+--The training tools of SNAP seems to mask all the CNDs. This makes the following training steps impossible, because we first 
+need to extract protein information (like 'export.ann' and 'export.dna') to caculate the parameters. 
+--Since snaphmm not giving a usable output, I then tried to train AUGUSTUS on the output of the 1st round of maker, also get a 
+weird result after a success run.
+--GeneMark is also tried, I run it with snaphmm and AUGUSTUS. As mentioned before, results all masked by snaphmm. And there's 
+some 'Failed' in the index log, but the sbatch did't return error
+
+What I did:
+            Run MAKER round 1 with DNA(Pilon output) and RNA(Trinity output)
+            Run seperately based on round 1's output:
+                            Only with trained snaphmm
+                            Only with AUGUSTUS
+                            GeneMark + snaphmm + AUGUSTUS
+Also I've change the verson of maker, dosen't help. 
+Plus when I running the second round, running time is longer than the first round.
+
+Thus, the only usable output is from the first round, but it is generated with only ets info, NOT ACCURATE!!
+
+Though Training steps doesn't work for me, I still put the code in. They actually works for the maker.
+
+BY THE WAY: I asked a classmate from another group to try working on my fasta files and code, a valid result is generated! 
+But we did the same thing.
+
+
+
+-------------------------------------------1st round-------------------output: new1-----------------------------------------------
+module load bioinfo-tools maker
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/new1
+maker -CTL
+
+*change maker_opts.ctl:
+genome= /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+est=/domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/trinity_out/trinity_merged/Trinity-GG.fasta
+est2genome=1
+
+maker -c 4  (Using Sbatch to run this command)
+
+-------------------------------------------2nd round--------use snaphmm------------output: new2----------------------------------------------
+module load bioinfo-tools maker
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/new1/pilon_out_0427.maker.output
+gff3_merge -d pilon_out_0427_master_datastore_index.log
+maker2zff pilon_out_0427.all.gff
+fathom genome.ann genome.dna -validate > snap_validate_output.txt
+cat snap_validate_output.txt | grep "error" 
+#MODEL315 7492 8096 3 + errors(1): cds:internal_stop warnings(2): split-start exon-1:short(1)
+grep -vwE "MODEL315" genome.ann > genome.ann2
+fathom genome.ann2 genome.dna -validate 
+fathom genome.ann2 genome.dna -categorize 1000
+fathom uni.ann uni.dna -export 1000 -plus 
+grep '>' export.dna | wc -l
+forge export.ann export.dna
+hmm-assembler.pl pilon_out_0427 . > pilon_out_0427.hmm
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/new2
+maker -CTL
+
+*change maker_opts.ctl:
+genome=/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+snaphmm=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/new1/pilon_out_0427.maker.output/pilon_out_0427.hmm
+
+maker -c 4  (Using Sbatch to run this command)
+
+-------------------------------------------2rd round--------use augustus-------------output: only_AUGU---------------------------------------------
+
+module load bioinfo-tools maker
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/new1/pilon_out_0427.maker.output
+zff2gff3.pl genome.ann | perl -plne 's/\t(\S+)$/\t\.\t$1/' >genome.gff3
+
+##################################################################################
+change and create new.pl and copy 'configs' folder from AUGUSTUS..since need sudo but can't access
+$configdir="/domus/h1/jili0178/GA2019/analyses_results/04_annotation/new2/pilon_out_0427.maker.output/config";
+-----------------------------------------------AND-----------------------------------------------------------------
+https://github.com/hyphaltip/genome-scripts/blob/master/gene_prediction/zff2augustus_gbk.pl to download zff2aug.pl
+##################################################################################
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+perl zff2aug.pl > augustus.gbk
+grep "LOCUS" augustus.gbk| wc -l
+#get a number 1061, set 20% as partition, following steps using this
+--------------------------------------------OR------------------------------------------------
+gff2gbSmallDNA.pl genome.gff3 /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa 4000 augustus.gbk
+#get a number 1439, set 20% as partition
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+randomSplit.pl augustus.gbk 200
+export AUGUSTUS_CONFIG_PATH=/domus/h1/jili0178/GA2019/analyses_results/04_annotation/new2/pilon_out_0427.maker.output/config
+perl new.pl --species=my_durian
+etraining --species=my_durian augustus.gbk.train
+augustus --species=my_durian augustus.gbk.test | tee first_training.out
+(SKIP the optimize step, since it's too time consuming, and only can improve a little)
+cd /domus/h1/jili0178/GA2019/analyses_results/04_annotation/only_AUGU
+maker -CTL
+
+*change maker_opts.ctl:
+genome=/domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+augustus_species=my_durian
+
+-------------------------------------------2rd round--------GeneMark-------------output: DELETED---------------------------------------------
+
+cp -v /sw/apps/bioinfo/GeneMark/4.33-es/rackham/gm_key $HOME/.gm_key
+gmes_petap.pl -ES -fungus -cores 2 -sequence /domus/h1/jili0178/GA2019/analyses_results/02_polishDNA/pilon_out_for0411_0427/pilon_out_0427.fa
+(Better run in sbatch)
+
+Get ./output/gmhmm.mod as gmhmm input

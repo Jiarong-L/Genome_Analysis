@@ -1,1 +1,0 @@
-changed the name of pilon_out_0427.fasta to pilon_out_0427.fa 

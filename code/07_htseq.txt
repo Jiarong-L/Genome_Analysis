@@ -1,0 +1,17 @@
+
+
+If want to use pilon_out_0427.all.gff, should first delete the fasta sequence, and -i set as ID
+
+----------------------------------------------------------------------------------------------------------------------
+module load bioinfo-tools
+module load samtools/1.9
+module load htseq/0.9.1
+
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040097_sorted.bam
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040096_sorted.bam
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040093_sorted.bam
+samtools index  -@ 10 bam /domus/h1/jili0178/GA2019/analyses_results/06_assemblyRNA/sorted_tophat/SRR6040092_sorted.bam
+
+
+Run sbatch htseq.sh 
+NOTE: Used output of 'round1_maker.output', this is the output for a round 1 MAKER trial, accidentally deleted.

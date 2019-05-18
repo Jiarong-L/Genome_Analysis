@@ -1,0 +1,30 @@
+
+Following http://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
+
+
+install jellyfish:
+
+cd /domus/h1/jili0178/GA2019/analyses_results/01_assemblyDNA
+wget https://github.com/gmarcais/Jellyfish/releases/download/v1.1.12/jellyfish-linux
+mv jellyfish-linux jellyfish
+chmod +x jellyfish
+
+
+
+zcat /domus/h1/jili0178/GA2019/Genome_Analysis/data/illumina_DNA/SRR6058604_scaffold_06.1P.fastq.gz  >1P.fq
+
+./jellyfish count -m 17 -t 10 -s 1G 1P.fq
+./jellyfish dump mer_counts_0 > kmer_count.fasta
+./jellyfish stats mer_counts_0
+./jellyfish histo mer_counts_0 > kmer_hist.tsv
+
+
+In RStudio:
+
+x <- read.table('<DIR>/kmer_hist.tsv', header = F, sep = " ", stringsAsFactors = F)
+x9<-kmer_hist[100:1000,]
+pdf("kmer_hist.pdf")
+plot(x9, type = "l")
+dev.off()
+
+details see https://docs.google.com/document/d/17W9Smb3jsrqAn71ogQFQaz34UeXfE2Y42RwhoB-83ks/edit

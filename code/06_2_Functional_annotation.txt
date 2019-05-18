@@ -1,0 +1,5 @@
+1. Go to eggnogdb's website
+2. Upload 'export.aa' from MAKER round 1's output (since it's the only valid one)
+3. Choose 'DIAMOND', since HMMER doesn't work (maybe my file is not suitable to do any hmm stuff)
+4. Use default settings
+5. Output see: http://eggnogdb.embl.de/#/app/emapper?jobname=MM_8IFoTk
