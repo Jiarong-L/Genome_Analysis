@@ -1,0 +1,81 @@
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("DESeq2")
+
+browseVignettes("DESeq2")
+
+install.packages("tidyverse")
+
+library(DESeq2)
+library(tidyverse)
+
+setwd("C:\\Users\\12990\\Desktop\\round1")
+
+
+> rna_SRR6040092_counts <- read.delim("C:/Users/12990/Desktop/round1/rna_SRR6040092_counts.txt", header=FALSE)
+>   View(rna_SRR6040092_counts)
+> rna_SRR6040093_counts <- read.delim("C:/Users/12990/Desktop/round1/rna_SRR6040093_counts.txt", header=FALSE)
+>   View(rna_SRR6040093_counts)
+> rna_SRR6040096_counts <- read.delim("C:/Users/12990/Desktop/round1/rna_SRR6040096_counts.txt", header=FALSE)
+>   View(rna_SRR6040096_counts)
+> rna_SRR6040097_counts <- read.delim("C:/Users/12990/Desktop/round1/rna_SRR6040097_counts.txt", header=FALSE)
+>   View(rna_SRR6040097_counts)
+
+
+rna<-merge(rna_SRR6040092_counts,rna_SRR6040093_counts,by="V1")
+rna<-merge(rna,rna_SRR6040096_counts,by="V1")
+rna<-merge(rna,rna_SRR6040097_counts,by="V1")
+names(rna) <- c("V1","leaf","root","stem","aril")
+rownames(rna)<-rna[,1]
+rna<-rna[,-1]
+rna<-rna[-1,]
+#run 5 times rna<-rna[-1,]
+
+treat<-c("nonfruit","nonfruit","nonfruit","fruit")
+metadata <- data.frame(row.names=colnames(rna), treat)
+
+
+////dds <- DESeqDataSetFromMatrix(rna, metadata, design= ~ treat)
+dds <- DESeqDataSetFromMatrix(countData=rna, colData=metadata, design= ~ treat)
+
+
+dds <- DESeq(dds)
+
+#PCA
+rld<-rlog(dds)
+#or:  rld <- rlogTransformation(dds)
+colData(dds)
+plotPCA(rld,intgroup=c("treat","sizeFactor"))
+
+
+#MA
+res <- results(dds)
+#res <- tbl_df(res)
+plotMA(res)
+
+#Ordering
+head(res)
+summary(res)
+resOrdered <- res[order(res$padj),]  #order by padj(adjusted p-value), small padj indicates large difference
+resOrdered=as.data.frame(resOrdered)
+head(resOrdered)
+resOrdered=na.omit(resOrdered)  #delete NA values
+write.csv(resOrdered,"resOrdered.csv")
+
+#heatmap#
+select<-order(rowMeans(counts(dds,normalized=TRUE)),decreasing = TRUE)[1:666]
+nt<-normTransform(dds)
+log2.norm.counts<-assay(nt)[select,]
+df<-as.data.frame(colData(dds))
+install.packages('pheatmap')
+library(pheatmap)
+pheatmap(log2.norm.counts,cluster_rows = TRUE,show_rownames = FALSE,cluster_cols = TRUE,annotation_col = df)
+
+
+http://eggnogdb.embl.de/#/app/emapper?jobname=MM_mRklD0 
+or
+http://eggnogdb.embl.de/#/app/emapper?jobname=MM_8IFoTk
+contains my functional annotation result.
+
+Can later search genes with small padj, they are likely to be differentially expressed between fruit and non-fruit parts of Durian.
+And in my result, there are 340 genes with padj<0.01 (426 for p-value, but I tend to believe padj).
