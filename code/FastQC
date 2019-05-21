@@ -1,0 +1,1 @@
+fastqc -o <out put dir> <my fq>
