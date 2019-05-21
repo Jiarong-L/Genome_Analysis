@@ -63,7 +63,7 @@ resOrdered=na.omit(resOrdered)  #delete NA values
 write.csv(resOrdered,"resOrdered.csv")
 
 #heatmap#
-select<-order(rowMeans(counts(dds,normalized=TRUE)),decreasing = TRUE)[1:666]
+select<-order(rowMeans(counts(dds,normalized=TRUE)),decreasing = TRUE)[1:1182] 
 nt<-normTransform(dds)
 log2.norm.counts<-assay(nt)[select,]
 df<-as.data.frame(colData(dds))
