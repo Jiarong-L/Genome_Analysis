@@ -1,6 +1,4 @@
-
-#### cd /domus/h1/jili0178/GA2019/Genome_Analysis/code
-#### git pull origin master 
-#### git add --all
-#### git commit -m ''
-#### git push origin master
+## Important results
+* Result Folder & discription: see '4 Expected result' of Project Plan 
+* [Qusetions in Labmannual](xxx)
+* [Overal Report](xxx)
