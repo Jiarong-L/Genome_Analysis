@@ -1,0 +1,16 @@
+[jili0178@r405 02_polishDNA]$  samtools flagstat bwa_for0411_0427.sorted.bam
+9148153 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+126605 + 0 supplementary
+0 + 0 duplicates
+8909902 + 0 mapped (97.40% : N/A)
+9021548 + 0 paired in sequencing
+4510774 + 0 read1
+4510774 + 0 read2
+8150932 + 0 properly paired (90.35% : N/A)
+8611266 + 0 with itself and mate mapped
+172031 + 0 singletons (1.91% : N/A)
+430456 + 0 with mate mapped to a different chr
+294278 + 0 with mate mapped to a different chr (mapQ>=5)
+
+samtools depth bwa_for0411_0427.sorted.bam >samtool_depth.txt
