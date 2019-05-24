@@ -1,4 +1,4 @@
 ## Important results
-* Result Folder & discription: see '4 Expected result' of Project Plan 
+* Result Folder & discription: see 'Result' in Wiki 
 * [Qusetions in Labmannual](xxx)
 * [Overal Report](xxx)
