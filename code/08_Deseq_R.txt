@@ -46,7 +46,8 @@ rld<-rlog(dds)
 #or:  rld <- rlogTransformation(dds)
 colData(dds)
 plotPCA(rld,intgroup=c("treat","sizeFactor"))
-
+#check normalization
+#plot( assay(rld)[ , 1:2],col=rgb(0,0,0,.2), pch=16, cex=0.3 
 
 #MA
 res <- results(dds)
