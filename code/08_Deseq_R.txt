@@ -63,8 +63,9 @@ resOrdered=na.omit(resOrdered)  #delete NA values
 write.csv(resOrdered,"resOrdered.csv")
 
 #heatmap#
-#select<- head(order(res$padj), 15)  #for top 15 padj genes
-select<-order(rowMeans(counts(dds,normalized=TRUE)),decreasing = TRUE)[1:1182] 
+select<- head(order(res$padj), 15)  #for top 15 padj genes
+#also try [1:1182]
+#select<-order(rowMeans(counts(dds,normalized=TRUE)),decreasing = TRUE)[1:1182] 
 nt<-normTransform(dds)
 log2.norm.counts<-assay(nt)[select,]
 df<-as.data.frame(colData(dds))
