@@ -26,5 +26,3 @@ x9<-kmer_hist[100:1000,]
 pdf("kmer_hist.pdf")
 plot(x9, type = "l")
 dev.off()
-
-details see https://docs.google.com/document/d/17W9Smb3jsrqAn71ogQFQaz34UeXfE2Y42RwhoB-83ks/edit
