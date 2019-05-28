@@ -29,5 +29,5 @@ htseq-count -f bam -t CDS -i Name -r pos --stranded=no /domus/h1/jili0178/GA2019
 
 
 
-#The currect usage: add --stranded=no, since my RNA illumina method is not standard
+#The currect usage: add --stranded=no, since my RNA illumina method is not stranded
 #Then -r name    ,since memory exceeded
